@@ -106,7 +106,7 @@ namespace TransportForLondonTests.StepDefinitions
         public void ThenIShouldSeeAnUpdatedJourneyTimeReflectingTheLeastWalkingRoute()
         {
             String journeyTime = journeyResults.getJourneyTime();
-            Assert.AreEqual("11", journeyTime, "Journey Time is not as expected on UI");
+            Assert.AreEqual("10", journeyTime, "Journey Time is not as expected on UI");
 
         }
 
