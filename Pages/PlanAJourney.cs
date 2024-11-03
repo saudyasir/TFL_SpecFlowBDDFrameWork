@@ -66,6 +66,7 @@ namespace TransportForLondonTests.Pages
 
         public JourneyResults clickPlanMyJourney()
         {
+            wait.Until(ExpectedConditions.ElementIsVisible(btnPlanMyJourney));
             driver.FindElement(btnPlanMyJourney).Click();
             return new JourneyResults(driver);
         }

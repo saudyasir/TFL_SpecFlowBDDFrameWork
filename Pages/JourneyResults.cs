@@ -47,6 +47,7 @@ namespace TransportForLondonTests.Pages
 
         public String getWalkingTime()
         {
+            wait.Until(ExpectedConditions.ElementIsVisible(txtWalkingTime));
             String walkingTime = driver.FindElement(txtWalkingTime).Text;
             Console.WriteLine("Walking time = " + walkingTime);
             return walkingTime;
@@ -54,6 +55,7 @@ namespace TransportForLondonTests.Pages
 
         public void clickEditPreferences() {
             js.ExecuteScript("window.scrollBy(0, -1000);");
+            wait.Until(ExpectedConditions.ElementIsVisible(btnEditPreferences));
             driver.FindElement(btnEditPreferences).Click();
         }
 
