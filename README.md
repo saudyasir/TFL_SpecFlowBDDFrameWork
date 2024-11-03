@@ -7,4 +7,5 @@
 5. Created corresponding step definition files in the StepsDefinitions folder to map Gherkin steps to actual code.
 6. Created Hooks file in Hooks folder for Before and After scneario steps
 7. Created individual page classed (followed POM)
+8. Added Extent Report class in Utility folder for reporting purpose and updated the Hooks class
    
