@@ -2,13 +2,13 @@
 using OpenQA.Selenium.Interactions;
 using OpenQA.Selenium.Chrome;
 using OpenQA.Selenium.Support.UI;
-using SeleniumExtras.WaitHelpers;
 using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using SeleniumExtras.WaitHelpers;
 
 namespace TransportForLondonTests.Pages
 {
@@ -22,7 +22,7 @@ namespace TransportForLondonTests.Pages
         {
             this.driver = driver;
             js = (IJavaScriptExecutor)driver;
-            wait = new WebDriverWait(driver, TimeSpan.FromSeconds(10));
+            wait = new WebDriverWait(driver, TimeSpan.FromSeconds(20));
         }
 
         By hdrWalkingAndCycling = By.XPath("//h2[text()='Walking and cycling']");
@@ -39,7 +39,7 @@ namespace TransportForLondonTests.Pages
         By btnViewDetails = By.XPath("(//div/button[@class='secondary-button show-detailed-results view-hide-details'])[1]");
         
         public String getCyclingTime() {
-            wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementIsVisible(txtCyclingTime));
+            wait.Until(ExpectedConditions.ElementIsVisible(txtCyclingTime));
             String cyclingTime = driver.FindElement(txtCyclingTime).Text;
             Console.WriteLine("Cycling time = "+ cyclingTime);
             return cyclingTime;
@@ -59,13 +59,13 @@ namespace TransportForLondonTests.Pages
 
         public void selectRoutesWithLeastWalking(){
             js.ExecuteScript("window.scrollBy(0, 1000);");
-            wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementIsVisible(radRoutesWithLeastWalking));
+            wait.Until(ExpectedConditions.ElementIsVisible(radRoutesWithLeastWalking));
             driver.FindElement(radRoutesWithLeastWalking).Click();
         }
 
         public void clickUpdateJourney(){
             driver.FindElement(btnUpdateJourney).Click();
-            wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementIsVisible(txtJourneyTime));
+            wait.Until(ExpectedConditions.ElementIsVisible(txtJourneyTime));
         }
 
         public String getJourneyTime()
@@ -100,7 +100,7 @@ namespace TransportForLondonTests.Pages
             Boolean flag = false;
              try
             {
-                IWebElement myElement = wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementIsVisible(hdrWalkingAndCycling));
+                IWebElement myElement = wait.Until(ExpectedConditions.ElementIsVisible(hdrWalkingAndCycling));
                 if (myElement.Displayed)
                 {
                     flag = true;
