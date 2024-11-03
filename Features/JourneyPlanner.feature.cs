@@ -76,11 +76,11 @@ namespace TransportForLondonTests.Features
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("Plan a valid journey from Leicester Square Underground Station to Covent Garden U" +
             "nderground Station")]
-        [NUnit.Framework.CategoryAttribute("HappyPath")]
+        [NUnit.Framework.CategoryAttribute("journeyfromLeicesterSquareUndergroundStationtoCoventGardenUndergroundStation")]
         public virtual void PlanAValidJourneyFromLeicesterSquareUndergroundStationToCoventGardenUndergroundStation()
         {
             string[] tagsOfScenario = new string[] {
-                    "HappyPath"};
+                    "journeyfromLeicesterSquareUndergroundStationtoCoventGardenUndergroundStation"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Plan a valid journey from Leicester Square Underground Station to Covent Garden U" +
                     "nderground Station", null, tagsOfScenario, argumentsOfScenario, this._featureTags);

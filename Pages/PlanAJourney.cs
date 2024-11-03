@@ -2,13 +2,13 @@
 using OpenQA.Selenium.Interactions;
 using OpenQA.Selenium.Chrome;
 using OpenQA.Selenium.Support.UI;
-using SeleniumExtras.WaitHelpers;
 using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using SeleniumExtras.WaitHelpers;
 
 
 namespace TransportForLondonTests.Pages
@@ -21,7 +21,7 @@ namespace TransportForLondonTests.Pages
 
         public PlanAJourney(IWebDriver driver) { 
         this.driver = driver;
-        wait = new WebDriverWait(driver, TimeSpan.FromSeconds(10));
+        wait = new WebDriverWait(driver, TimeSpan.FromSeconds(20));
         }
 
         By btnAcceptAllCookies = By.Id("CybotCookiebotDialogBodyLevelButtonLevelOptinAllowAll");
